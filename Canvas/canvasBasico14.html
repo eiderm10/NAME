@@ -1,0 +1,54 @@
+<!DOCTYPE>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>CANVAS</title>
+<style>
+#canvas1{
+    border:dotted 3px yellow;
+    background:green;
+}
+</style>
+<script>
+window.onload = function(){
+    var canvas = document.getElementById("canvas1");
+    if(canvas && canvas.getContext){
+		var ctx = canvas.getContext("2d");
+		if(ctx){
+			var imagen = new Image();
+			function procesaImagen(){
+				ctx.drawImage(imagen,10,10);
+				var w = imagen.width;
+				var h = imagen.height;
+				var imagenData = ctx.getImageData(10,10,w,h);
+				var data = imagenData.data;
+				/*Escala de grises*/
+				for(var i=0; i<data.length; i+=4){
+					var gris = (data[i]+data[i+1]+data[i+2])/3
+					data[i] = gris;   //rojo
+					data[i+1] = gris;  //Verde
+					data[i+2] = gris;  //Azul	
+				}	
+				ctx.putImageData(imagenData, 250, 10);	 
+			}
+			//
+			imagen.src = "imagenes/grito.jpg";
+			imagen.onload = function(e){
+				procesaImagen()
+			}
+		} else {
+		 alert("Error al crear el contexto");
+		}
+    }    
+}
+</script>
+</head>
+<body>
+<h1>Conceptos básicos de Canvas</h1>
+<canvas id="canvas1" width="500px" height="300px">
+Tu navegador no soporta el CANVAS
+</canvas>
+<div>
+</div>
+</body>
+</html>
