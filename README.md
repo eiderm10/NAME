@@ -234,7 +234,7 @@ window.onload = function(){
 }
 </script>
 </head>
-<body background="fondo.png"
+<body background="fondo.png">
 <h1>  INGRESA AL JUEGO </h1>
 <canvas id="miCanvas" width="1200px" height="650px">
 Tu navegador no soporta CANVAS
