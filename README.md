@@ -235,7 +235,6 @@ window.onload = function(){
 </script>
 </head>
 <body>
-<h1>  TALLER HTML </h1>
 <canvas id="miCanvas" width="1200px" height="650px">
 Tu navegador no soporta CANVAS
 </canvas>
