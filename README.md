@@ -235,7 +235,7 @@ window.onload = function(){
 </script>
 </head>
 <body background="fondo.png">
-<a href="URL"> INGRESA AL JUEGO </a>
+<a href="https://eiderm10.github.io/Pages2/"> INGRESA AL JUEGO </a>
 <canvas id="miCanvas" width="1200px" height="650px">
 Tu navegador no soporta CANVAS
 </canvas>
